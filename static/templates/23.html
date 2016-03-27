@@ -1,0 +1,44 @@
+
+<!-- AngularJS SQL - PHP,MySQL,w3schools -->
+{% extends 'base.html' %}
+
+{% block content %}
+	{% verbatim %}
+
+		<div ng-app="" ng-controller="customerController">
+			<p class="lead">
+				<center>
+				<input class="form-control" type="text" ng-model='test' placeholder= 'Search Table' style="width: 70%">
+				<br />
+				<table class="table table-hover table-bordered table-striped" style="width: 70%">
+					<thead>
+						<tr>
+							<td align="center">Name</td>
+							<td align="center">City</td>
+							<td align="center">Country</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="name in names | filter:test | orderBy:'Country'">
+							<td>{{ name.Name }}</td>
+							<td>{{ name.City }}</td>
+							<td>{{ name.Country|uppercase }}</td>
+						</tr>
+					</tbody>
+				</table>
+				</center>
+			</p>
+			
+		</div>
+		
+	{% endverbatim %}
+	<script type="text/javascript">
+	function customerController($scope,$http) {
+		var site = "http://www.w3schools.com";
+		var page = "/website/Customers_MySQL.php";
+		$http.get(site+page)
+		.success(function(response) {$scope.names=response;})
+	}
+	</script>
+	
+{% endblock content %}

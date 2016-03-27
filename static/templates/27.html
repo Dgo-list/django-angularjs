@@ -1,0 +1,14 @@
+<!-- Angular JS HTML DOM ng-hide -->
+{% extends 'base.html' %}
+{% block content %}
+	
+	<div ng-app="">
+		<p class="lead" ng-hide="para1">I'm Paragraph One.</p>
+		<p class="lead" ng-hide="para2">I'm Paragraph Two.<p>
+		<p><input type="checkbox" ng-model="para1">Check Me to Hide Paragraph One</p>
+		<p><input type="checkbox" ng-model="para2">Check Me to Hide Paragraph Two</p>
+			
+		</p>
+	</div>
+
+{% endblock content %}

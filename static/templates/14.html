@@ -1,0 +1,19 @@
+<!-- AngularJS Controllers - Controller in External Files -->
+{% extends 'base.html' %}
+
+{% block content %}
+	{% verbatim %}
+		<div ng-app="" ng-controller="personController">
+			<p class="lead">
+				<form class="form-inline">
+					<label>First Name &nbsp</label><input class="form-control" type="text" ng-model="fname">
+					<label>Last Name &nbsp</label><input class="form-control" type="text" ng-model="lname">
+				</form>
+				Full Name : {{ fullname() }}
+			</p>
+			
+		</div>
+	{% endverbatim %}
+	<script type="text/javascript" src = '/static/js/personController.js'></script>
+	
+{% endblock content %}

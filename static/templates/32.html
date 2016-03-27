@@ -1,0 +1,14 @@
+<!-- Angular JS - Modules -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+	{% verbatim %}
+	<div ng-app="myApp" ng-controller="myCtrl">
+		{{ fname + " " + lname }}
+	</div>
+	{% endverbatim %}
+	<script type="text/javascript" src="/static/js/myApp.js"></script>
+	<script type="text/javascript" src="/static/js/myCtrl.js"></script>
+
+{% endblock content %}

@@ -1,0 +1,13 @@
+<!-- AJS<!-- AJS Expression-Objects -->
+{% extends 'base.html' %}
+{% block content %}
+   
+   	{% verbatim %}
+   	
+   		<div ng-app="" ng-init="person={fname:'Hello',lname:'World'}">
+   			<p class="lead">Hello {{ person.lname }}</p>
+   			<p class="lead">Using ng-bind : Hello <span ng-bind="person.lname"></span></p>
+   		</div>
+
+   	{% endverbatim %}
+{% endblock content %} -->

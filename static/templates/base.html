@@ -1,0 +1,42 @@
+<html lang="en">
+
+	<head>
+
+		<title>{% block title %} Angular JS {% endblock title %}</title>
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/static/css/bootstrap-theme.min.css">
+		<!-- BootStrap Version 3.3.2 -->
+
+	</head>
+
+	<body>
+
+
+		<div class="container" style="padding-top: 50px ; width: 80%; box-shadow: 0px -10px 4px;">
+
+			<h3 align="left"><a href="/">Home</a></h3>
+			<div class="panel panel-success">
+
+				<div class="panel-heading">
+
+					<h1 align="center">Angular JS</h1>
+
+				</div>
+
+				<div class="panel-body">
+			
+					{% block content %} {% endblock content %}
+
+				</div>
+
+			</div>
+
+		</div>
+		
+		<script type="text/javascript" src="/static/js/angular.min.js"></script>
+		<script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+		<!-- Angular JS Version 1.2.15 & BootStrap JS Version 3.3.2 -->
+
+	</body>
+
+</html>

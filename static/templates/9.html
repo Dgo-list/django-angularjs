@@ -1,0 +1,14 @@
+<!-- AJS<!-- AJS Directives-Data Binding -->
+{% extends 'base.html' %}
+{% block content %}
+   
+   	{% verbatim %}
+   	
+   		<div ng-app="" ng-init="amount=1;cost=5">
+   			<p class="lead">Amounts : <input class="form-control" type="text" ng-model="amount"></p>
+   			<p class="lead">Cost : <input class="form-control" type="text" ng-model="cost"></p>
+   			<p class="lead">Total : ${{ amount*cost }}</p>
+   		</div>
+
+   	{% endverbatim %}
+{% endblock content %} -->

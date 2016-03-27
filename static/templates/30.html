@@ -1,0 +1,30 @@
+<!-- Angular JS HTML EVENTS ng-show -->
+{% extends 'base.html' %}
+{% block content %}
+	
+	{% verbatim %}
+	<div ng-app="" ng-controller="hideController">
+		<button class="btn btn-lg btn-primary" ng-click="toggle()">Show User</button>
+		<div ng-show="myVar">
+			<br />
+			<form class="form-inline">
+				<input class="form-control" type="text" placeholder="First Name" ng-model="fname">
+				<input class="form-control" type="text" placeholder="Last Name" ng-model="lname">
+			</form>
+			<h1>Full Name : {{ fname + " " + lname }}</h1>
+		</div>
+	</div>
+	{% endverbatim %}
+
+	<script type="text/javascript">
+		function hideController($scope) {
+			$scope.fname = "Arif";
+			$scope.lname = "Uz Zaman";
+			$scope.myVar = false; 
+			$scope.toggle = function() {
+				$scope.myVar = !$scope.myVar;
+			};
+		}
+	</script>
+
+{% endblock content %}

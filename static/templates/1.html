@@ -1,0 +1,15 @@
+<!-- 1st Angular JS Application -->
+
+{% extends "base.html" %}
+
+{% block title %}Example {{ id }}{% endblock title %}
+
+{% block content %}
+
+	<div ng-app="">
+		<h3>Enter Your Name: </h3>
+		<input class="form-control" type="text" ng-model='name'>
+		<h1>Hello <span ng-bind="name"></span></h1>
+	</div>
+
+{% endblock content %}

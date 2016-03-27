@@ -1,0 +1,30 @@
+<!-- Angular JS Forms -->
+{% extends 'base.html' %}
+{% block content %}
+	
+	{% verbatim %}
+	<div ng-app="" ng-controller="formController">
+		<form class="form-group">
+			<p><label>First Name : </label><input class="form-control" type="text"  ng-model="user.fname"></p>
+			<p><label>Last Name : </label><input class="form-control" type="text"  ng-model="user.lname"></p>
+			<br />
+			<button class="btn btn-lg btn-success" ng-click="reset()">RESET</button>
+		</form>
+		<br />
+		<p class="lead">{{ user.fname + " " + user.lname }}</p>
+		<p class="lead">Form = {{ user }} <br /> Master = {{ master }}</p>
+	
+	</div>
+	{% endverbatim %}
+
+	<script type="text/javascript">
+		function formController($scope) {
+			$scope.master = { fname: "Arif" , lname: "Uz Zaman"};
+			$scope.reset = function() {
+				$scope.user = angular.copy($scope.master);
+			};
+			$scope.reset();
+		}
+	</script>
+
+{% endblock content %}

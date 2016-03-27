@@ -1,0 +1,25 @@
+<!-- AngularJS Controllers -->
+{% extends 'base.html' %}
+
+{% block content %}
+	{% verbatim %}
+	<div ng-app="" ng-controller="personController">
+		
+		<p class="lead">
+			<form class="form-inline">
+				<label>First Name &nbsp</label><input class="form-control" type="text" ng-model="fname" >
+				<label>Last Name &nbsp</label><input class="form-control" type="text" ng-model="lname" >
+			</form>
+			<br>
+			Full Name : {{ fname + " " + lname }}
+		</p>
+
+	</div>
+	{% endverbatim %}
+	<script type="text/javascript">
+		function personController($scope) {
+			$scope.fname = "Arif",
+			$scope.lname = "Uz Zaman"
+		}
+	</script>
+{% endblock content %}

@@ -1,0 +1,20 @@
+<!-- Angular JS - Modules -->
+
+{% extends 'base.html' %}
+{% block content %}
+
+	{% verbatim %}
+	<div ng-app="myApp" ng-controller="myCtrl">
+		{{ fname + " " + lname }}
+	</div>
+
+	<script>
+		var app = angular.module("myApp", []);
+		app.controller("myCtrl", function($scope) {
+    		$scope.fname = "John";
+    		$scope.lname = "Doe";
+		});
+	</script>
+	{% endverbatim %}
+
+{% endblock content %}

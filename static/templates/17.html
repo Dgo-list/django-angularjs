@@ -1,0 +1,26 @@
+
+<!-- AngularJS Filters - Currency -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+	{% verbatim %}
+		<div ng-app="" ng-controller="costController">
+			<p class="lead">
+				<form class="form-inline">
+					<input class="form-control" type="number" ng-model="amount" placeholder="Amounts" >
+					<input class="form-control" type="number" ng-model="cost" placeholder="Cost">
+				</form>
+				<h3>Total = {{ (amount*cost) | currency }}</h3>
+			</p>
+			
+		</div>
+	{% endverbatim %}
+	<script type="text/javascript">
+	function costController($scope) {
+		$scope.amount = 1,
+		$scope.cost = 1
+	}
+	</script>
+	
+{% endblock content %}

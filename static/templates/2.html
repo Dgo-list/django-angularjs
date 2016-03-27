@@ -1,0 +1,42 @@
+<!-- Angular Directives -->
+
+{% extends 'base.html' %}
+
+{% block title %}Example {{ id }}{% endblock title%}
+
+{% block content %}
+
+	<div ng-app="" ng-init="countries=[
+		{locale: 'en-US', name: 'United States'},
+		{locale: 'en-GB', name: 'United Kingdom'},
+		{locale: 'en-FR', name: 'France'}
+		]">
+
+		<h3>Enter Your Name: </h3>
+		<input class="form-control" type="text" ng-model="name">
+		<h1>Hello <span ng-bind="name"></span></h1>
+
+		<h2>List of Countries with Locale : </h2>
+
+		{% verbatim %}
+		<table class="table table-hover table-bordered">
+
+			<thead>
+				<tr>
+					<th class="text-center"><b>Country</b></th>
+					<th class="text-center"><b>Locale</b></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="item in countries">
+					<td align="center">{{ item.name }}</td>
+					<td align="center">{{ item.locale }}</td>
+				</tr>
+			</tbody>
+			
+		</table>
+		{% endverbatim %}
+
+	</div>
+
+{% endblock content%}

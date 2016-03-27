@@ -1,0 +1,17 @@
+<!-- AngularJS Filters - upper/lowercase -->
+
+{% extends 'base.html' %}
+
+{% block content %}
+	{% verbatim %}
+		<div ng-app="" ng-controller="personController">
+			<p class="lead">
+				<h1>The Name is : {{ fname | uppercase }}</h1>
+				<h1>The Name is : {{ lname | lowercase }}</h1>
+			</p>
+			
+		</div>
+	{% endverbatim %}
+	<script type="text/javascript" src = '/static/js/personController.js'></script>
+	
+{% endblock content %}

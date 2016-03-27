@@ -1,0 +1,16 @@
+<!-- Angular JS HTML EVENTS ng-click -->
+{% extends 'base.html' %}
+{% block content %}
+	
+	{% verbatim %}
+	<div ng-app="" ng-controller="countController">
+		<button class="btn btn-lg btn-primary" ng-click="count=count+1">Click Me!</button>
+		<p class="lead">Total Click : {{ count }}<p>
+	</div>
+	{% endverbatim %}
+	<script type="text/javascript">
+		function countController($scope) {
+			$scope.count = 0
+		}
+	</script>
+{% endblock content %}

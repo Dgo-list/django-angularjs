@@ -1,0 +1,11 @@
+<!-- Angular JS HTML DOM ng-show - conditional logic -->
+{% extends 'base.html' %}
+{% block content %}
+	{% verbatim %}
+	<div ng-app="" ng-init="hour = 12">
+		<input class="form-control" type="number" style="width: 50%" ng-model="hour">
+		<p class="lead" ng-show="hour > 18">I'm Visible. Because, {{ hour }} > 18.</p>				
+	</div>
+	{% endverbatim %}
+
+{% endblock content %}

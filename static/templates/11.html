@@ -1,0 +1,34 @@
+<!-- AJS<!-- AJS Directives- ng-repeat-Array of Objects -->
+{% extends 'base.html' %}
+{% block content %}
+   
+   	{% verbatim %}
+   	
+         <div ng-app="" ng-init="names=[
+         {name:'Arif', country:'BD'},
+         {name:'Jhon', country:'US'},
+         {name:'Jack', country:'UK'}]">
+
+         <p class="lead">
+            <table class="table" align="center" style="width: 50%">
+
+               <thead>
+                  <tr>
+                     <th class="text-center">Name</th>
+                     <th class="text-center">Country</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr ng-repeat="name in names">
+                     <td align="center">{{ name.name }}</td>
+                     <td align="center">{{ name.country }}</td>
+                  </tr>
+               </tbody>
+
+            </table>
+         </p>
+            
+         </div>
+
+   	{% endverbatim %}
+{% endblock content %} -->
